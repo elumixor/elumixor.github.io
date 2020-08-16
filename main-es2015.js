@@ -157,7 +157,8 @@ class AppComponent {
         return this.productsService.products;
     }
     ngAfterViewInit() {
-        setTimeout(() => this.productsRefs.first.nativeElement.scrollIntoView({ behavior: "smooth" }), 1000);
+        if (this.productsRefs.first)
+            setTimeout(() => this.productsRefs.first.nativeElement.scrollIntoView({ behavior: "smooth" }), 1000);
     }
     switchMode() {
         this.nightMode = !this.nightMode;

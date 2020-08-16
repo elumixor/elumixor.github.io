@@ -281,7 +281,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function ngAfterViewInit() {
           var _this2 = this;
 
-          setTimeout(function () {
+          if (this.productsRefs.first) setTimeout(function () {
             return _this2.productsRefs.first.nativeElement.scrollIntoView({
               behavior: "smooth"
             });
