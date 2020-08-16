@@ -140,6 +140,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ./product-mobile/product-mobile.component */
     "./src/app/product-mobile/product-mobile.component.ts");
 
+    var _c0 = ["productRef"];
+
     function AppComponent_ng_template_0_app_image_link_1_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-image-link", 6);
@@ -216,7 +218,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function AppComponent_ng_template_5_app_product_mobile_0_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-product-mobile", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-product-mobile", 11, 12);
       }
 
       if (rf & 2) {
@@ -234,7 +236,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function AppComponent_ng_template_5_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, AppComponent_ng_template_5_app_product_mobile_0_Template, 1, 1, "app-product-mobile", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, AppComponent_ng_template_5_app_product_mobile_0_Template, 2, 1, "app-product-mobile", 10);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, AppComponent_ng_template_5_ng_container_1_Template, 1, 0, "ng-container", 7);
       }
@@ -275,6 +277,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       _createClass(AppComponent, [{
+        key: "ngAfterViewInit",
+        value: function ngAfterViewInit() {
+          var _this2 = this;
+
+          setTimeout(function () {
+            return _this2.productsRefs.first.nativeElement.scrollIntoView({
+              behavior: "smooth"
+            });
+          }, 1000);
+        }
+      }, {
         key: "switchMode",
         value: function switchMode() {
           this.nightMode = !this.nightMode;
@@ -302,9 +315,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
       type: AppComponent,
       selectors: [["app-root"]],
+      viewQuery: function AppComponent_Query(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵviewQuery"](_c0, true, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]);
+        }
+
+        if (rf & 2) {
+          var _t;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.productsRefs = _t);
+        }
+      },
       decls: 7,
       vars: 2,
-      consts: [["socialButtonsRef", ""], ["appResponsive", "", 1, "title"], [4, "ngIf", "ngIfElse"], ["mobile", ""], ["id", "socialButtons", "appResponsive", ""], ["class", "icon", 3, "href", "src", 4, "ngFor", "ngForOf"], [1, "icon", 3, "href", "src"], [4, "ngTemplateOutlet"], ["id", "productsContainer"], [3, "selected"], [3, "product", 4, "ngFor", "ngForOf"], [3, "product"]],
+      consts: [["socialButtonsRef", ""], ["appResponsive", "", 1, "title"], [4, "ngIf", "ngIfElse"], ["mobile", ""], ["id", "socialButtons", "appResponsive", ""], ["class", "icon", 3, "href", "src", 4, "ngFor", "ngForOf"], [1, "icon", 3, "href", "src"], [4, "ngTemplateOutlet"], ["id", "productsContainer"], [3, "selected"], [3, "product", 4, "ngFor", "ngForOf"], [3, "product"], ["productRef", ""]],
       template: function AppComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, AppComponent_ng_template_0_Template, 2, 1, "ng-template", null, 0, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
@@ -347,7 +371,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }, {
           type: _services_products_service__WEBPACK_IMPORTED_MODULE_2__["ProductsService"]
         }];
-      }, null);
+      }, {
+        productsRefs: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"],
+          args: ['productRef', {
+            read: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]
+          }]
+        }]
+      });
     })();
     /***/
 
@@ -614,9 +645,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+        var ctx_r16 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("width", 886 / 2)("height", 886)("src", ctx_r15.videoUrl, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeResourceUrl"]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("width", 886 / 2)("height", 886)("src", ctx_r16.videoUrl, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeResourceUrl"]);
       }
     }
 
@@ -789,9 +820,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+        var ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("width", 886 / 2)("height", 886)("src", ctx_r14.videoUrl, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeResourceUrl"]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("width", 886 / 2)("height", 886)("src", ctx_r15.videoUrl, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeResourceUrl"]);
       }
     }
 
@@ -956,13 +987,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var i_r13 = ctx.index;
+        var i_r14 = ctx.index;
 
-        var ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+        var ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleProp"]("top", ctx_r11.calculateBarTop(i_r13), "%");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleProp"]("top", ctx_r12.calculateBarTop(i_r14), "%");
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("selected", i_r13 === ctx_r11.selected);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("selected", i_r14 === ctx_r12.selected);
       }
     }
 
@@ -1075,13 +1106,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
     var ResponsiveDirective = function ResponsiveDirective(el) {
-      var _this2 = this;
+      var _this3 = this;
 
       _classCallCheck(this, ResponsiveDirective);
 
       this.mobileClass = false;
       addEventListener('resize', function () {
-        return _this2.mobileClass = screen.width < 500;
+        return _this3.mobileClass = screen.width < 500;
       });
       this.mobileClass = screen.width < 500;
     };
